@@ -1,0 +1,10 @@
+:root {
+  --color-text-primary: #222;
+  --color-bg-primary: #fff;
+  --container-max-width: 1120px;
+  --font-body:
+    "Noto Serif JP",
+    "Hiragino Mincho ProN",
+    "Yu Mincho",
+    serif;
+}

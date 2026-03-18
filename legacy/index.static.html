@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulangerie HAL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__inner">
+            <a href="#home" class="logo">
+                <img src="images/logo-hal.png" alt="HAL Boulangerie" style="height: 40px; width: auto;">
+            </a>
+            <button class="nav-toggle" id="js-nav-toggle">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="nav-menu" id="js-nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#address">Address</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero__inner">
+
+                <div class="hero__img-wrapper">
+                    <img src="images/hero-bread.jpg" alt="焼きたてパン" class="hero-main-img">
+
+                    <div class="hero__badge">
+                        <div class="rotating-text">
+                            <svg viewBox="0 0 100 100">
+                                <path id="circlePath" d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0" fill="transparent" />
+                                <text><textPath xlink:href="#circlePath">HAL BOULANGERIE  HAL BOULANGERIE </textPath></text>
+                            </svg>
+                        </div>
+                        <div class="badge__thumb">
+                            <img src="images/thumb-bread.jpg" alt="小图">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="news section scroll-reveal" id="news">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h3 class="section-title">NEWS</h3>
+                </div>
+                
+                <ul class="news-list">
+                    <li class="news-item">
+                        <a href="#">
+                            <div class="news-header">2022年11月30日</div>
+                            <div class="news-body">
+                                <p class="content">フランス　オーベルニュ地方の伝統パンや郷土料理の惣菜パンなどを販売するオーベルニュ地方フェアを開催いたします。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <div class="news-header">2022年11月16日</div>
+                            <div class="news-body">
+                                <p class="content">ご好評いただいております、デザートに、季節限定でオレンジを使用したデザートが加わります。</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <a href="#">
+                            <div class="news-header">2022年11月8日</div>
+                            <div class="news-body">
+                                <p class="content">名産ブルーチーズ「フルム・ダンベール」を使ったパンや郷土料理をアレンジした惣菜パンなど、フェア限定商品をご用意しております。</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="news-more">
+                    <a href="#" class="btn-more">more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu section scroll-reveal" id="menu">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h3 class="section-title">MENU</h3>
+                </div>
+                
+                <div class="menu-item scroll-reveal">
+                    <div class="menu-item__info">
+                        <h4>パン・オ・レザン</h4><br>
+                        <p>発酵バター香るクロワッサン生地に、滑らかなカスタードクリームとレーズンを合わせ、渦巻き状に焼き上げています。サクサクとした食感と優しい甘さが特徴のヴィエノワズリーです。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">290</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                    <div class="menu-item__img">
+                        <img src="images/bread-1.jpg" alt="食パン" class="custom-shape-reverse">
+                    </div>
+                </div>
+
+                <div class="menu-item is-reverse scroll-reveal">
+                    <div class="menu-item__img">
+                        <img src="images/bread-2.jpg" alt="クロワッサン" class="custom-shape">
+                    </div>
+                    <div class="menu-item__info">
+                        <h4>バゲット・トラディション</h4><br>
+                        <p>厳選した小麦粉の風味を最大限に引き出すため、低温長時間発酵でじっくりと熟成させました。皮は香ばしくバリッと、中は小麦の旨味が詰まったもちもちの食感に焼き上げています。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">310</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-reveal">
+                    <div class="menu-item__info">
+                        <h4>クロワッサン</h4><br>
+                        <p>フランス産の発酵バターを生地に丁寧に折り込み、幾重にも層を重ねて香ばしく焼き上げました。表面はサクサク、中はバターの風味が広がるしっとりとした食感に仕上げています。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">360</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                    <div class="menu-item__img">
+                        <img src="images/bread-3.jpg" alt="食パン" class="custom-shape-reverse">
+                    </div>
+                </div>
+
+                <div class="menu-item is-reverse scroll-reveal">
+                    <div class="menu-item__img">
+                        <img src="images/bread-4.jpg" alt="クロワッサン" class="custom-shape">
+                    </div>
+                    <div class="menu-item__info">
+                        <h4>パン・オ・マロン</h4><br>
+                        <p>全粒粉を配合した味わい深いカンパーニュ生地に、大粒の栗をゴロゴロと贅沢に合わせました。噛みしめるほどに小麦の旨みと栗の自然な甘みが口いっぱいに広がります。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">400</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item scroll-reveal">
+                    <div class="menu-item__info">
+                        <h4>パン・オ・ショコラ</h4><br>
+                        <p>発酵バターを幾重にも折り込んだクロワッサン生地に、濃厚なバトンショコラを合わせました。サクッとした食感と、口溶けの良いチョコレートのハーモニーを楽しめる一品に仕上げています。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">290</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                    <div class="menu-item__img">
+                        <img src="images/bread-5.jpg" alt="食パン" class="custom-shape-reverse">
+                    </div>
+                </div>
+
+                <div class="menu-item is-reverse scroll-reveal">
+                    <div class="menu-item__img">
+                        <img src="images/bread-6.jpg" alt="クロワッサン" class="custom-shape">
+                    </div>
+                    <div class="menu-item__info">
+                        <h4>生ハムと野菜のシリアルサンド</h4><br>
+                        <p>香ばしい穀物入りのバゲットに、塩気のある生ハムと瑞々しいトマト、レタスを合わせました。穀物の食感と素材本来の旨みを楽しめる、ヘルシーな一品に仕上げています。</p>
+                        <div class="menu-item__price">
+                            <span class="currency">¥</span>
+                            <span class="amount">780</span>
+                            <span class="tax-in">(税込)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-more">
+                    <a href="#" class="btn-more">more</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__row gallery__row--right">
+                <div class="gallery__track">
+                    <img src="images/gallery-1.jpg" alt="お店1">
+                    <img src="images/gallery-2.jpg" alt="お店2">
+                    <img src="images/gallery-3.jpg" alt="お店3">
+                    <img src="images/gallery-1.jpg" alt="お店1">
+                    <img src="images/gallery-2.jpg" alt="お店2">
+                    <img src="images/gallery-3.jpg" alt="お店3">
+                </div>
+            </div>
+            <div class="gallery__row gallery__row--left">
+                <div class="gallery__track">
+                    <img src="images/gallery-4.jpg" alt="お店4">
+                    <img src="images/gallery-5.jpg" alt="お店5">
+                    <img src="images/gallery-6.jpg" alt="お店6">
+                    <img src="images/gallery-4.jpg" alt="お店4">
+                    <img src="images/gallery-5.jpg" alt="お店5">
+                    <img src="images/gallery-6.jpg" alt="お店6">
+                </div>
+            </div>
+        </section>
+
+        <section class="address section scroll-reveal" id="address">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <h3 class="section-title">ADDRESS</h3>
+                </div>
+                <div class="address__content">
+                    <div class="address__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6484.31633552344!2d139.69490094810175!3d35.6484745542462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4f6383b351%3A0x72e7ab090ac2da6b!2z44CSMTUwLTAwMzMgVG9reW8sIFNoaWJ1eWEsIFNhcnVnYWt1Y2jFjSwgMjniiJLvvJHvvJggQiBCdWlsZGluZywg44OS44Or44K144Kk44OJ44OG44Op44K5!5e0!3m2!1szh-CN!2sjp!4v1769151188794!5m2!1szh-CN!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main-info">
+                    <div class="footer__brand">
+                        <img src="images/logo-hal.png" alt="HAL Boulangerie" class="footer__logo">
+                    </div>
+
+                    <div class="footer__address">
+                        <p>住所：東京都渋谷区猿楽町29-18</p>
+                        <p>電話：03-3344-1010</p>
+                        <p>営業時間：10:00～20:00</p>
+                    </div>
+
+                    <div class="footer__traffic">
+                        <p>東急東横線［代官山駅］下車　徒歩3分</p>
+                        <p>東急東横線・地下鉄日比谷線［中目黒駅］下車　徒歩7分</p>
+                        <p>JR山手線・JR埼京線・地下鉄日比谷線［恵比寿駅］下車　徒歩10分</p>
+                    </div>
+                </div>
+                
+                <nav class="footer__nav">
+                    <ul class="footer__links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#address">Address</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <p class="copyright">© 2026 HAL Boulangerie. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

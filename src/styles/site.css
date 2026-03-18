@@ -1,0 +1,338 @@
+@import "../../legacy/src/styles/style.css";
+
+.section-title::before {
+  background-image: url("/images/decorate.png");
+}
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.is-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.data-status {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5d4037;
+  font-size: 0.95rem;
+}
+
+.contact {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  background: rgb(255, 249, 235);
+  border: 1px solid #eee;
+  border-radius: 0 0 20px 0;
+  padding: 28px;
+}
+
+.contact-card__title {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.2rem;
+  color: rgb(108, 65, 14);
+  margin-bottom: 18px;
+  line-height: 1.8;
+}
+
+.contact__toggle-btn {
+  min-width: 260px;
+}
+
+.contact-form {
+  margin-top: 20px;
+}
+
+.contact-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.contact-form__row label {
+  font-size: 0.95rem;
+  color: #5d4037;
+}
+
+.contact-form__row input,
+.contact-form__row textarea {
+  border: 1px solid #d9c7ad;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: #fff;
+}
+
+.contact__submit-btn {
+  margin-top: 4px;
+}
+
+.contact__submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.contact-form__status {
+  margin-top: 12px;
+  font-size: 0.92rem;
+}
+
+.contact-form__status--success {
+  color: #2e7d32;
+}
+
+.contact-form__status--error {
+  color: #c62828;
+}
+
+.faq-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item + .faq-item {
+  margin-top: 10px;
+}
+
+.faq-item details {
+  background: #fff;
+  border: 1px solid #eadfce;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  color: rgb(108, 65, 14);
+  font-weight: bold;
+}
+
+.faq-item p {
+  margin: 10px 0 0;
+  color: #5d4037;
+  line-height: 1.9;
+}
+
+@media (max-width: 900px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.address .address__content {
+  display: grid;
+  grid-template-columns: 37% 60%;
+  column-gap: 3%;
+  margin-top: 44px;
+  align-items: start;
+}
+
+.address__calendar {
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  padding: 8px 6px 6px;
+  max-width: none;
+  width: 100%;
+  justify-self: start;
+}
+
+.address__calendar-title {
+  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  color: #4a2d24;
+  margin: 0 0 12px;
+}
+
+.address__week-grid,
+.address__date-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.address__week-cell {
+  background: #5e8f6b;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.address__date-cell {
+  background: #ece8e8;
+  color: #4a2d24;
+  text-align: center;
+  padding: 6px 0;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.address__date-cell.is-open {
+  background: #b88f4f;
+  color: #fff;
+}
+
+.address__date-cell.is-empty {
+  background: transparent;
+}
+
+.address__legend {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+  color: #4a2d24;
+}
+
+.address__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+}
+
+.address__legend-chip {
+  display: inline-block;
+  width: 28px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #d1c4ab;
+  background: #ece8e8;
+}
+
+.address__legend-chip.is-open {
+  background: #b88f4f;
+  border-color: #b88f4f;
+}
+
+.address__map-wrap {
+  width: 100%;
+}
+
+.address__map {
+  width: 100%;
+}
+
+.address__map iframe {
+  min-height: 460px;
+}
+
+@media (max-width: 900px) {
+  .address .address__content {
+    grid-template-columns: 1fr;
+  }
+
+  .address__legend {
+    justify-content: flex-start;
+  }
+}
+
+.gallery__track {
+  gap: 0;
+}
+
+.gallery__item {
+  flex: 0 0 320px;
+  width: 320px;
+  height: 260px;
+}
+
+.gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery__item--text {
+  background: #fff;
+}
+
+.gallery__text-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ece5dc;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px 20px;
+  background: #fff;
+}
+
+.gallery__text-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/thumb-bread.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.gallery__text-title {
+  position: relative;
+  z-index: 1;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem;
+  color: #5d4037;
+  line-height: 1.8;
+  margin: 0 0 8px;
+}
+
+.gallery__text-desc {
+  position: relative;
+  z-index: 1;
+  font-size: 0.85rem;
+  color: #7a5c50;
+  line-height: 1.9;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gallery__item {
+    flex-basis: 260px;
+    width: 260px;
+    height: 220px;
+  }
+
+  .gallery__text-card {
+    padding: 14px 14px;
+  }
+
+  .gallery__text-title {
+    font-size: 0.95rem;
+  }
+
+  .gallery__text-desc {
+    font-size: 0.78rem;
+    line-height: 1.7;
+  }
+}

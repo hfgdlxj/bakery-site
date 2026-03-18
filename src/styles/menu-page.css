@@ -1,0 +1,291 @@
+.menu-page {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  background: #fff;
+  font-family: "Noto Serif JP", "Shippori Mincho", serif;
+}
+
+.menu-page__back {
+  padding-left: 50px;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-page__back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #5d4037;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s;
+}
+
+.menu-page__back-link:hover {
+  opacity: 0.7;
+}
+
+.menu-page__hero {
+  text-align: center;
+  padding: 56px 20px 48px;
+  border-bottom: 1px solid #e8ddd4;
+}
+
+.menu-page__hero h1 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 2.6rem;
+  letter-spacing: 0.18em;
+  color: #2d1a10;
+  margin: 0 0 14px;
+}
+
+.menu-page__hero p {
+  color: #8d6e63;
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* カテゴリーナビ */
+.menu-page__categories {
+  padding: 60px 0 50px;
+}
+
+.menu-page__categories-title {
+  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: #2d1a10;
+  margin: 0 0 36px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.category-card {
+  display: block;
+  text-decoration: none;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 3 / 2;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(93, 64, 55, 0.18);
+}
+
+.category-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.category-card:hover .category-card__img {
+  transform: scale(1.04);
+}
+
+.category-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(30, 14, 5, 0.72) 0%, transparent 55%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 18px 20px;
+}
+
+.category-card__label-en {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.category-card__label-ja {
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+/* 各カテゴリーセクション */
+.menu-category-section {
+  padding: 72px 0 0;
+  scroll-margin-top: 40px;
+}
+
+.menu-category-section__header {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid rgb(184, 143, 79);
+}
+
+.menu-category-section__title-ja {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.7rem;
+  color: #2d1a10;
+  letter-spacing: 0.06em;
+  margin: 0;
+}
+
+.menu-category-section__title-en {
+  color: #b88f4f;
+  font-size: 0.88rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+}
+
+.menu-category-section__description {
+  color: #7a5c50;
+  font-size: 0.96rem;
+  line-height: 2;
+  margin: 10px 0 36px;
+}
+
+/* 商品グリッド */
+.menu-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.menu-product-card {
+  background: #fff;
+  border: 1px solid #ede5d8;
+  border-radius: 0 0 14px 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(93, 64, 55, 0.13);
+}
+
+.menu-product-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.menu-product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.menu-product-card:hover .menu-product-card__img {
+  transform: scale(1.05);
+}
+
+.menu-product-card__body {
+  padding: 18px 18px 20px;
+}
+
+.menu-product-card__name {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.05rem;
+  color: #2d1a10;
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+
+.menu-product-card__desc {
+  font-size: 0.875rem;
+  color: rgb(108, 65, 14);
+  line-height: 2;
+  margin: 0 0 14px;
+}
+
+.menu-product-card__price {
+  font-family: "Shippori Mincho", serif;
+  color: #5d4037;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.menu-product-card:hover .menu-product-card__price {
+  background-color: #5d4037;
+  color: #fff;
+}
+
+.menu-product-card__price .currency {
+  font-size: 0.85rem;
+}
+
+.menu-product-card__price .amount {
+  font-size: 1.2rem;
+  letter-spacing: 0.04em;
+}
+
+.menu-product-card__price .tax-in {
+  font-size: 0.72rem;
+  font-weight: normal;
+  color: #8d6e63;
+  transition: color 0.3s ease;
+}
+
+.menu-product-card:hover .menu-product-card__price .tax-in {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* レスポンシブ */
+@media (max-width: 960px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .menu-page {
+    padding-top: 128px;
+  }
+
+  .menu-page__hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .menu-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-category-section__title-ja {
+    font-size: 1.35rem;
+  }
+}
