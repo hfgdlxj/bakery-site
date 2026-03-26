@@ -27,6 +27,19 @@
   opacity: 0.7;
 }
 
+.menu-page__to-top-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 56px;
+  padding-bottom: 8px;
+}
+
+.menu-page__to-top {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
 .menu-page__hero {
   text-align: center;
   padding: 56px 20px 48px;
@@ -254,6 +267,29 @@
 
 .menu-product-card:hover .menu-product-card__price .tax-in {
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* スマホ：戻るリンクをヘッダーロゴ（.header__inner）の左端に揃える */
+@media (max-width: 768px) {
+  .menu-page__back {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: 0;
+  }
+
+  .menu-page__to-top-wrap {
+    margin-top: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* 各カテゴリー見出し・説明文の左右余白（画面端に張り付かない） */
+  .menu-category-section__header,
+  .menu-category-section__description {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
 }
 
 /* レスポンシブ */

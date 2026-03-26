@@ -24,9 +24,9 @@ export const menuCategories: CategoryInfo[] = [
     description: '具材の旨みをたっぷり閉じ込めた、食事にもなるお惣菜パン。ランチや軽食にぴったりの、ボリューム満点なラインナップです。',
   },
   {
-    id: 'クロワッサン・デニッシュ',
-    labelJa: 'クロワッサン・デニッシュ',
-    labelEn: 'Croissants & Danish',
+    id: 'クロワッサン',
+    labelJa: 'クロワッサン',
+    labelEn: 'Croissants',
     image: '/images/categories/Croissants.jpg',
     description: 'フランス産発酵バターを丁寧に折り込んだ、幾重もの層が美しいヴィエノワズリー。サクサクの食感と芳醇なバターの香りをお楽しみください。',
   },

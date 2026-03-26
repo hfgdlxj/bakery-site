@@ -48,89 +48,91 @@ export function ContactSection() {
         <div className="contact__grid">
           <article className="contact-card">
             <h4 className="contact-card__title">
-              商品及び店舗に関するお問い合わせ / ご意見 / ご要望
+              商品及び店舗に関するお問い合わせ
             </h4>
 
-            <button
-              type="button"
-              className="btn-more contact__toggle-btn"
-              onClick={() => setIsFormOpen((prev) => !prev)}
-              aria-expanded={isFormOpen}
-              aria-controls="contact-form-panel"
-            >
-              {isFormOpen
-                ? 'お問い合わせフォームを閉じる'
-                : 'お問い合わせフォームを開く'}
-            </button>
-
-            {isFormOpen && (
-              <form
-                id="contact-form-panel"
-                className="contact-form"
-                ref={formRef}
-                onSubmit={handleSubmit}
+            <div className="contact-card__form-area">
+              <button
+                type="button"
+                className="btn-more contact__toggle-btn"
+                onClick={() => setIsFormOpen((prev) => !prev)}
+                aria-expanded={isFormOpen}
+                aria-controls="contact-form-panel"
               >
-                <div className="contact-form__row">
-                  <label htmlFor="contact-name">お名前</label>
-                  <input id="contact-name" name="name" type="text" required />
-                </div>
+                {isFormOpen
+                  ? 'お問い合わせフォームを閉じる'
+                  : 'お問い合わせフォームを開く'}
+              </button>
 
-                <div className="contact-form__row">
-                  <label htmlFor="contact-kana">フリガナ</label>
-                  <input id="contact-kana" name="kana" type="text" required />
-                </div>
-
-                <div className="contact-form__row">
-                  <label htmlFor="contact-email">E-mail</label>
-                  <input
-                    id="contact-email"
-                    name="email"
-                    type="email"
-                    autoComplete="email"
-                    required
-                  />
-                </div>
-
-                <div className="contact-form__row">
-                  <label htmlFor="contact-file">ファイル添付</label>
-                  <input id="contact-file" name="attachment" type="file" />
-                </div>
-
-                <div className="contact-form__row">
-                  <label htmlFor="contact-message">お問合せ内容</label>
-                  <textarea
-                    id="contact-message"
-                    name="message"
-                    rows={6}
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="btn-more contact__submit-btn"
-                  disabled={submitStatus === 'submitting'}
+              {isFormOpen && (
+                <form
+                  id="contact-form-panel"
+                  className="contact-form"
+                  ref={formRef}
+                  onSubmit={handleSubmit}
                 >
-                  {submitStatus === 'submitting' ? '送信中...' : '送信する'}
-                </button>
+                  <div className="contact-form__row">
+                    <label htmlFor="contact-name">お名前</label>
+                    <input id="contact-name" name="name" type="text" required />
+                  </div>
 
-                {submitStatus === 'success' && (
-                  <p className="contact-form__status contact-form__status--success">
-                    送信が完了しました。お問い合わせありがとうございます。
-                  </p>
-                )}
-                {submitStatus === 'error' && (
-                  <p className="contact-form__status contact-form__status--error">
-                    送信に失敗しました。時間をおいて再度お試しください。
-                  </p>
-                )}
-                {submitStatus === 'not-configured' && (
-                  <p className="contact-form__status contact-form__status--error">
-                    送信設定が未完了です。環境変数を確認してください。
-                  </p>
-                )}
-              </form>
-            )}
+                  <div className="contact-form__row">
+                    <label htmlFor="contact-kana">フリガナ</label>
+                    <input id="contact-kana" name="kana" type="text" required />
+                  </div>
+
+                  <div className="contact-form__row">
+                    <label htmlFor="contact-email">E-mail</label>
+                    <input
+                      id="contact-email"
+                      name="email"
+                      type="email"
+                      autoComplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div className="contact-form__row">
+                    <label htmlFor="contact-file">ファイル添付</label>
+                    <input id="contact-file" name="attachment" type="file" />
+                  </div>
+
+                  <div className="contact-form__row">
+                    <label htmlFor="contact-message">お問合せ内容</label>
+                    <textarea
+                      id="contact-message"
+                      name="message"
+                      rows={6}
+                      required
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="btn-more contact__submit-btn"
+                    disabled={submitStatus === 'submitting'}
+                  >
+                    {submitStatus === 'submitting' ? '送信中...' : '送信する'}
+                  </button>
+
+                  {submitStatus === 'success' && (
+                    <p className="contact-form__status contact-form__status--success">
+                      送信が完了しました。お問い合わせありがとうございます。
+                    </p>
+                  )}
+                  {submitStatus === 'error' && (
+                    <p className="contact-form__status contact-form__status--error">
+                      送信に失敗しました。時間をおいて再度お試しください。
+                    </p>
+                  )}
+                  {submitStatus === 'not-configured' && (
+                    <p className="contact-form__status contact-form__status--error">
+                      送信設定が未完了です。環境変数を確認してください。
+                    </p>
+                  )}
+                </form>
+              )}
+            </div>
           </article>
 
           <article className="contact-card">

@@ -22,6 +22,15 @@ export function MenuSection() {
               <>
                 <div className="menu-item__img">
                   <img src={item.image} alt={item.imageAlt} className="custom-shape" />
+                  <div className="menu-item__img-overlay">
+                    <h4>{item.name}</h4>
+                    <p>{item.description}</p>
+                    <div className="menu-item__price">
+                      <span className="currency">¥</span>
+                      <span className="amount">{item.price}</span>
+                      <span className="tax-in">(税込)</span>
+                    </div>
+                  </div>
                 </div>
                 <div className="menu-item__info">
                   <h4>{item.name}</h4>
@@ -48,6 +57,15 @@ export function MenuSection() {
                 </div>
                 <div className="menu-item__img">
                   <img src={item.image} alt={item.imageAlt} className="custom-shape" />
+                  <div className="menu-item__img-overlay">
+                    <h4>{item.name}</h4>
+                    <p>{item.description}</p>
+                    <div className="menu-item__price">
+                      <span className="currency">¥</span>
+                      <span className="amount">{item.price}</span>
+                      <span className="tax-in">(税込)</span>
+                    </div>
+                  </div>
                 </div>
               </>
             )}

@@ -1,4 +1,31 @@
+import { useLocation, useNavigate } from 'react-router-dom'
+
 export function SiteFooter() {
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const handleSectionNavigate = (sectionId: string) => {
+    return (event: React.MouseEvent<HTMLAnchorElement>) => {
+      event.preventDefault()
+
+      if (location.pathname === '/') {
+        const scrollToTarget = () => {
+          const target = document.getElementById(sectionId)
+          if (target) {
+            target.scrollIntoView({ behavior: 'auto', block: 'start' })
+            window.history.replaceState(null, '', `/#${sectionId}`)
+          }
+        }
+
+        scrollToTarget()
+        window.requestAnimationFrame(scrollToTarget)
+        return
+      }
+
+      navigate(`/#${sectionId}`)
+    }
+  }
+
   return (
     <footer className="footer">
       <div className="container">
@@ -28,19 +55,29 @@ export function SiteFooter() {
           <nav className="footer__nav">
             <ul className="footer__links">
               <li>
-                <a href="#home">Home</a>
+                <a href="/#home" onClick={handleSectionNavigate('home')}>
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#news">News</a>
+                <a href="/#news" onClick={handleSectionNavigate('news')}>
+                  News
+                </a>
               </li>
               <li>
-                <a href="#menu">Menu</a>
+                <a href="/#menu" onClick={handleSectionNavigate('menu')}>
+                  Menu
+                </a>
               </li>
               <li>
-                <a href="#contact">Contact</a>
+                <a href="/#contact" onClick={handleSectionNavigate('contact')}>
+                  Contact
+                </a>
               </li>
               <li>
-                <a href="#address">Address</a>
+                <a href="/#address" onClick={handleSectionNavigate('address')}>
+                  Address
+                </a>
               </li>
             </ul>
           </nav>

@@ -47,6 +47,13 @@
   color: rgb(108, 65, 14);
   margin-bottom: 18px;
   line-height: 1.8;
+  text-align: center;
+}
+
+.contact-card__form-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact__toggle-btn {
@@ -55,6 +62,7 @@
 
 .contact-form {
   margin-top: 20px;
+  width: min(560px, 100%);
 }
 
 .contact-form__row {
@@ -243,10 +251,57 @@
 @media (max-width: 900px) {
   .address .address__content {
     grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  /* 地図を上、カレンダーを下 */
+  .address__map-wrap {
+    order: -1;
+  }
+
+  .address__calendar {
+    order: 1;
+    width: 80%;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-self: center;
+    padding: 6px 4px 4px;
+  }
+
+  .address__calendar-title {
+    font-size: 0.88rem;
+    margin: 0 0 9px;
+  }
+
+  .address__week-grid,
+  .address__date-grid {
+    gap: 6px;
+  }
+
+  .address__week-cell {
+    padding: 5px 0;
+    font-size: 0.72rem;
+  }
+
+  .address__date-cell {
+    padding: 5px 0;
+    font-size: 0.74rem;
   }
 
   .address__legend {
     justify-content: flex-start;
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .address__legend-item {
+    font-size: 0.67rem;
+  }
+
+  .address__legend-chip {
+    width: 22px;
+    height: 11px;
   }
 }
 
@@ -334,5 +389,210 @@
   .gallery__text-desc {
     font-size: 0.78rem;
     line-height: 1.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .header__inner {
+    padding: 14px 16px;
+  }
+
+  .logo img {
+    height: 72px !important;
+    margin-top: 8px;
+    margin-left: 0;
+  }
+
+  .nav-toggle {
+    right: 16px;
+    top: 18px;
+  }
+
+  .hero__inner {
+    margin-top: 88px;
+  }
+
+  .hero-main-img {
+    border-radius: 140px 0 0 0;
+  }
+
+  /* スマホでは右下バッジ（回転テキスト＋サムネ）を非表示 */
+  .hero__badge {
+    display: none !important;
+  }
+
+  .menu .container {
+    padding: 0 16px;
+  }
+
+  .menu-item__info {
+    padding: 18px 16px !important;
+  }
+
+  .menu-item__info h4 {
+    font-size: 1.25rem;
+    line-height: 1.8;
+  }
+
+  .menu-item__info p {
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+
+  .footer .container {
+    padding: 0 18px;
+  }
+
+  .footer__nav {
+    margin-top: 24px;
+  }
+}
+
+/* メニュー画像オーバーレイ */
+.menu-item__img {
+  position: relative;
+  /* デスクトップでは overflow: visible のまま（ホバー時の円弧伸縮を保つ） */
+}
+
+.menu-item__img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(30, 14, 5, 0.88) 10%,
+    rgba(30, 14, 5, 0.28) 65%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 28px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.menu-item__img-overlay h4 {
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 0 8px;
+  line-height: 1.6;
+}
+
+.menu-item__img-overlay p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.8;
+  margin: 0 0 12px;
+}
+
+.menu-item__img-overlay .menu-item__price {
+  color: #fff;
+  background: transparent !important;
+}
+
+.menu-item__img-overlay .menu-item__price .tax-in {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* モバイル：テキストパネル非表示、タップでオーバーレイ表示 */
+@media (max-width: 768px) {
+  .menu-item__info {
+    display: none !important;
+  }
+
+  .menu-item__img {
+    width: 100% !important;
+    flex: none !important;
+    overflow: hidden;
+    border-radius: 0 !important;
+  }
+
+  .menu-item__img img {
+    height: 280px !important;
+    border-radius: 0 !important;
+  }
+
+  /* legacy の .is-reverse 向け 140px 角丸を上書き（2,4,6枚目など） */
+  .menu-item.is-reverse .menu-item__img img {
+    border-radius: 0 !important;
+  }
+
+  /* legacy のホバー時の画像拡大・移動を無効化（overflow:hidden で画像が消え白く見える） */
+  .menu-item:not(.is-reverse) .menu-item__img:hover img,
+  .menu-item:not(.is-reverse) .menu-item__img:active img {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  .menu-item.is-reverse .menu-item__img:hover img,
+  .menu-item.is-reverse .menu-item__img:active img {
+    width: 100% !important;
+    transform: none !important;
+  }
+
+  /* モバイル：白い半透明オーバーレイに変更 */
+  .menu-item__img-overlay {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.88);
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .menu-item__img-overlay h4 {
+    color: #2d1a10;
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+  }
+
+  .menu-item__img-overlay p {
+    color: #5d4037;
+    font-size: 0.88rem;
+    line-height: 1.9;
+    margin: 0 0 14px;
+  }
+
+  .menu-item__img-overlay .menu-item__price {
+    color: #5d4037;
+  }
+
+  .menu-item__img-overlay .menu-item__price .tax-in {
+    color: #8d6e63;
+  }
+
+  /* legacy の .menu-item:hover .menu-item__price（白文字）を上書き */
+  .menu-item:hover .menu-item__img-overlay .menu-item__price {
+    color: #2d1a10 !important;
+    background-color: transparent !important;
+  }
+
+  .menu-item:hover .menu-item__img-overlay .menu-item__price .tax-in {
+    color: #6d4c41 !important;
+    opacity: 1;
+  }
+
+  /* デバイス/検証環境によって hover が使える場合は hover でも表示 */
+  .menu-item__img:hover .menu-item__img-overlay {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 64px !important;
+  }
+
+  .hero-main-img {
+    border-radius: 110px 0 0 0;
+  }
+
+  .nav-menu ul li {
+    margin: 18px 0;
+  }
+
+  .nav-menu ul li a {
+    font-size: 1.5rem;
   }
 }

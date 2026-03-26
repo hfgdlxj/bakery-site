@@ -6,7 +6,7 @@ import type { MenuItem } from './data'
 const menuCategorySchema = z.enum([
   '定番のパン',
   'お惣菜パン',
-  'クロワッサン・デニッシュ',
+  'クロワッサン',
   '菓子パン',
   'サンドイッチ',
   'コーヒー',

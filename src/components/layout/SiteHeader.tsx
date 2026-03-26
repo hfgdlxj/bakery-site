@@ -79,13 +79,13 @@ export function SiteHeader({ isOpen, onToggle, onClose }: SiteHeaderProps) {
             </a>
           </li>
           <li>
-            <a href="/#address" onClick={handleSectionNavigate('address')}>
-              Address
+            <a href="/#contact" onClick={handleSectionNavigate('contact')}>
+              Contact
             </a>
           </li>
           <li>
-            <a href="/#contact" onClick={handleSectionNavigate('contact')}>
-              Contact
+            <a href="/#address" onClick={handleSectionNavigate('address')}>
+              Address
             </a>
           </li>
         </ul>

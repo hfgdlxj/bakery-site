@@ -1,7 +1,7 @@
 export type MenuCategory =
   | '定番のパン'
   | 'お惣菜パン'
-  | 'クロワッサン・デニッシュ'
+  | 'クロワッサン'
   | '菓子パン'
   | 'サンドイッチ'
   | 'コーヒー'
@@ -19,19 +19,19 @@ export type MenuItem = {
 
 export const menuItems: MenuItem[] = [
   {
-    name: 'パン・オ・レザン',
+    name: 'カヌレ',
     description:
-      '発酵バター香るクロワッサン生地に、滑らかなカスタードクリームとレーズンを合わせ、渦巻き状に焼き上げています。サクサクとした食感と優しい甘さが特徴のヴィエノワズリーです。',
-    price: 290,
+      '外はカリッと香ばしく、中はしっとりとした食感が特徴のフランスの伝統菓子です。ラム酒とバニラの風味が広がる、大人にも人気の一品です。',
+    price: 280,
     category: '定番のパン',
     image: '/images/menu/Classic Bread1.jpg',
     imageAlt: 'パン・オ・レザン',
     featured: true,
   },
   {
-    name: 'バゲット・トラディション',
+    name: 'バゲット',
     description:
-      '厳選した小麦粉の風味を最大限に引き出すため、低温長時間発酵でじっくりと熟成させました。皮は香ばしくバリッと、中は小麦の旨味が詰まったもちもちの食感に焼き上げています。',
+      '外はパリッと香ばしく、中はほどよい弾力のあるシンプルなフランスパンです。そのままでも、サンドイッチやお食事と合わせてもお楽しみいただけます。',
     price: 310,
     category: 'お惣菜パン',
     image: '/images/menu/Savory Bread1.jpg',
@@ -44,40 +44,40 @@ export const menuItems: MenuItem[] = [
     description:
       'フランス産の発酵バターを生地に丁寧に折り込み、幾重にも層を重ねて香ばしく焼き上げました。表面はサクサク、中はバターの風味が広がるしっとりとした食感に仕上げています。',
     price: 360,
-    category: 'クロワッサン・デニッシュ',
+    category: 'クロワッサン',
     image: '/images/menu/Croissants1.jpg',
     imageAlt: 'クロワッサン',
     featured: true,
   },
   {
-    name: 'パン・オ・マロン',
+    name: 'ブール',
     description:
-      '全粒粉を配合した味わい深いカンパーニュ生地に、大粒の栗をゴロゴロと贅沢に合わせました。噛みしめるほどに小麦の旨みと栗の自然な甘みが口いっぱいに広がります。',
-    price: 400,
+      '外は香ばしく焼き上げ、中はやわらかくふんわりとした食感が楽しめる丸いパンです。シンプルな味わいで、そのままでもお食事にも合わせやすい一品です。',
+    price: 300,
     category: '菓子パン',
-    image: '/images/menu/Sweet Bread1.jpg',
+    image: '/images/menu/Sweet Bread2.jpg',
     imageAlt: 'パン・オ・マロン',
     featured: true,
     reverse: true,
   },
   {
-    name: 'パン・オ・ショコラ',
+    name: '生ハムと野菜のシリアルサンド',
     description:
-      '発酵バターを幾重にも折り込んだクロワッサン生地に、濃厚なバトンショコラを合わせました。サクッとした食感と、口溶けの良いチョコレートのハーモニーを楽しめる一品に仕上げています。',
-    price: 290,
+      '香ばしい穀物入りのバゲットに、塩気のある生ハムと瑞々しいトマト、レタスを合わせました。穀物の食感と素材本来の旨みを楽しめる、ヘルシーな一品に仕上げています。',
+    price: 690,
     category: 'サンドイッチ',
     image: '/images/menu/Sandwiches1.jpg',
     imageAlt: 'パン・オ・ショコラ',
     featured: true,
   },
   {
-    name: '生ハムと野菜のシリアルサンド',
+    name: 'コーヒー',
     description:
-      '香ばしい穀物入りのバゲットに、塩気のある生ハムと瑞々しいトマト、レタスを合わせました。穀物の食感と素材本来の旨みを楽しめる、ヘルシーな一品に仕上げています。',
-    price: 780,
+      '香ばしい香りとほどよい苦味が楽しめる、定番のブラックコーヒーです。すっきりとした後味で、パンやスイーツとの相性も抜群です。',
+    price: 320,
     category: 'コーヒー',
     image: '/images/menu/coffee1.jpg',
-    imageAlt: '生ハムと野菜のシリアルサンド',
+    imageAlt: 'コーヒー',
     featured: true,
     reverse: true,
   },
@@ -106,7 +106,7 @@ export const menuItems: MenuItem[] = [
     description:
       'ノワゼット（焦がしバター）を丁寧に折り込んだデニッシュ生地を、幾層にも重ねて焼き上げました。芳ばしい香りとサクッとした食感が後を引く逸品です。',
     price: 320,
-    category: 'クロワッサン・デニッシュ',
+    category: 'クロワッサン',
     image: '/images/menu/Croissants2.jpg',
     imageAlt: '焦がしバターのデニッシュ',
     featured: false,
@@ -116,7 +116,7 @@ export const menuItems: MenuItem[] = [
     description:
       'バター香るサクサクのデニッシュ生地に、季節のフルーツと濃厚なカスタードクリームをのせました。見た目も華やか、味わいも贅沢な一品です。',
     price: 380,
-    category: 'クロワッサン・デニッシュ',
+    category: 'クロワッサン',
     image: '/images/menu/Croissants3.jpg',
     imageAlt: 'フルーツデニッシュ',
     featured: false,
@@ -147,7 +147,7 @@ export const menuItems: MenuItem[] = [
       '宇治産抹茶を練り込んだふんわりとした生地に、国産小豆を丁寧に炊き上げた粒あんをたっぷり包みました。抹茶の香りとほどよい甘さが絶妙なバランスです。',
     price: 260,
     category: '菓子パン',
-    image: '/images/menu/Sweet Bread2.jpg',
+    image: '/images/menu/Sweet Bread4.jpg',
     imageAlt: '抹茶あんぱん',
     featured: false,
   },

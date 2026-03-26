@@ -101,6 +101,16 @@ export function MenuPage() {
               </section>
             )
           })}
+
+          <div className="menu-page__to-top-wrap">
+            <button
+              type="button"
+              className="menu-page__to-top btn-more"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
+              トップへ
+            </button>
+          </div>
         </div>
       </div>
 
